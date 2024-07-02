@@ -29,13 +29,23 @@ public class TableUtilitiesTest {
     @Test
     public void testGetSmallMultiplicationTable() {
         String expected =
-                        "  1 |  2 |  3 |  4 |  5 |\n" +
+                "  1 |  2 |  3 |  4 |  5 |\n" +
                         "  2 |  4 |  6 |  8 | 10 |\n" +
                         "  3 |  6 |  9 | 12 | 15 |\n" +
                         "  4 |  8 | 12 | 16 | 20 |\n" +
                         "  5 | 10 | 15 | 20 | 25 |\n";
 
         String actual = TableUtilities.getSmallMultiplicationTable();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGetTWOMultiplicationTable() {
+        String expected =
+                        "  1 |  2 |\n" +
+                        "  2 |  4 |\n" ;
+
+        String actual = TableUtilities.getMultiplicationTable(2);
         Assert.assertEquals(expected, actual);
     }
 
